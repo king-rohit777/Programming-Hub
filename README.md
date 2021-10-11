@@ -12,8 +12,7 @@
   The goal is to practice common dsa and competitive problems daily from different sources like hackerrank, kattis, codewars etc.
 </p>
 
-
 ## Motivation!
 
 Push yourself to code daily till 100 days, and feel the difference!
-Motivation -> Solve Programs Daily !!
+Motivation -> !! Solve Programs Daily !!
