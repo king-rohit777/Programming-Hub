@@ -27,26 +27,30 @@ public:
     {
 
         int n = height.size();
-        int lh = 0, rh = height.size() - 1;
+        int l = 0, r = height.size() - 1;
         int minHeight, maxArea = 0, currArea;
         int length;
-        while (lh < rh)
+        while (l < r)
         {
 
-            minHeight = min(height[lh], height[rh]);
-            length = rh - lh;
+            int lh = height[l];
+            int rh = height[r];
+
+            minHeight = min(lh, rh);
+
+            length = r - l;
 
             currArea = (minHeight * length);
 
             maxArea = max(maxArea, currArea);
 
-            if (lh > rh)
+            if (lh < rh)
             {
-                rh--;
+                l++;
             }
             else
             {
-                lh++;
+                r--;
             }
         }
         return maxArea;
