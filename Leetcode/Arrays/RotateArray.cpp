@@ -26,3 +26,33 @@ Constraints:
 -231 <= nums[i] <= 231 - 1
 0 <= k <= 105
 */
+
+/*
+Approaches
+-----------
+1) extra array
+2) using the same array but reversing it first
+3) Two Pointer approach
+
+*/
+
+// Approach 2
+
+class Solution
+{
+public:
+    void rotate(vector<int> &nums, int k)
+    {
+
+        while (k > nums.size())
+        {
+            k = k - nums.size();
+        }
+        if (nums.size() > 1)
+        {
+            reverse(nums.begin(), nums.end());
+            reverse(nums.begin(), nums.begin() + k);
+            reverse(nums.begin() + k, nums.end());
+        }
+    }
+};
