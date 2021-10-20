@@ -2,8 +2,7 @@
 Approach
 ---------
 1) Using inbuilt c++ next permutation function
-
-2)
+2) Using 2 pointers
 
 */
 
