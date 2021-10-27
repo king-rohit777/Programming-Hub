@@ -37,3 +37,44 @@ public:
         return max(longestStreak, streak);
     }
 };
+
+// Approach 2
+//-----------
+
+// Using Hashset
+
+class Solution
+{
+public:
+    int longestConsecutive(vector<int> &nums)
+    {
+
+        set<int> hashSet;
+
+        for (int num : nums)
+        {
+            hashSet.insert(num);
+        }
+
+        int longestStreak = 0;
+
+        for (int num : nums)
+        {
+
+            if (!hashSet.count(num - 1))
+            {
+                int currentnum = num;
+                int currentStreak = 1;
+
+                while (hashSet.count(currentnum + 1))
+                {
+                    currentnum += 1;
+                    currentStreak += 1;
+                }
+
+                longestStreak = max(longestStreak, currentStreak);
+            }
+        }
+        return longestStreak;
+    }
+};
